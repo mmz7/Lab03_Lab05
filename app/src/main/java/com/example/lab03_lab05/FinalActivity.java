@@ -65,4 +65,12 @@ public class FinalActivity extends Activity {
             }
         });
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        editor.putBoolean("MainActivity", false);
+        editor.putBoolean("FinalActivity", true);
+        editor.putBoolean("EditFormActivity", false);
+    }
 }

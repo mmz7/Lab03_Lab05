@@ -76,5 +76,9 @@ public class EditFormActivity extends Activity {
         sPrefEditor.putBoolean(username+"_pink", pink.isChecked());
 
         sPrefEditor.apply();
+
+        sPrefEditor.putBoolean("MainActivity", false);
+        sPrefEditor.putBoolean("FinalActivity", false);
+        sPrefEditor.putBoolean("EditFormActivity", true);
     }
 }

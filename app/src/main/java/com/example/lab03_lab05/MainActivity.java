@@ -55,7 +55,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        if(sPref.getBoolean("FinalActivity", false)) {
+            intent = new Intent(getApplicationContext(), FinalActivity.class);
+            startActivity(intent);
+        } else if(sPref.getBoolean("EditFormActivity", false)) {
+            intent = new Intent(getApplicationContext(), EditFormActivity.class);
+            startActivity(intent);
+        }
+    }
 
-        if()
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        sPrefEditor.putBoolean("MainActivity", true);
+        sPrefEditor.putBoolean("FinalActivity", false);
+        sPrefEditor.putBoolean("EditFormActivity", false);
     }
 }
