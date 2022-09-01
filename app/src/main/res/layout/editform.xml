@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.41"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgTextBox"
+        android:text="enter inspirational text"
+        app:layout_constraintBottom_toTopOf="@id/horizGuide"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="enter"
+        app:layout_constraintTop_toBottomOf="@id/pinkflowers"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/imgEnter"/>
+
+    <TextView
+        android:id="@+id/checkboxlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Flowers"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgTextBox" />
+    <CheckBox
+        android:id="@+id/blueflowers"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Blue"
+        app:layout_constraintTop_toBottomOf="@id/checkboxlabel"
+        app:layout_constraintLeft_toRightOf="@id/vertGuide"
+        />
+    <CheckBox
+        android:id="@+id/pinkflowers"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Pink"
+        app:layout_constraintTop_toBottomOf="@id/blueflowers"
+        app:layout_constraintLeft_toRightOf="@id/vertGuide"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
